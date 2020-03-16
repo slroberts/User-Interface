@@ -3,64 +3,267 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+
+  /* Stretch Goal */
+  font-family: "Faster One", "Bangers", cursive;
 }
 
 /* Your code starts here! */
+body {
+  width: 876px;
+  margin: 90px auto 0 auto;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+header,
+section {
+  padding: 65px 0;
+}
+
+nav {
+  height: 80px;
+  padding: 30px 0 60px 0;
+
+  /* Stretch Goal */
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+}
+
+nav a {
+  margin-right: 56px;
+  text-decoration: none;
+  color: #cccccc;
+}
+
+nav div.logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 35px;
+
+  /* Stretch Goal */
+  background-image: url("/great-idea-website/img/logo.png");
+  width: 183px;
+  height: 36px;
+}
+
+header {
+  border-bottom: solid thin #000000;
+}
+
+header .header-left {
+  width: 420px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 33px;
+}
+
+header .header-left h1 {
+  font-size: 82px;
+  font-family: "Bangers", cursive;
+}
+
+header .header-left button {
+  border: solid thin #000000;
+  padding: 5px 35px;
+  font-size: 16px;
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 1px;
+}
+
+header div.header-img {
+  display: inline-block;
+  vertical-align: middle;
+
+  /* Stretch Goal */
+  background-image: url("/great-idea-website/img/header-img.png");
+  width: 379px;
+  height: 379px;
+}
+
+section.two-column .col {
+  display: inline-block;
+  width: 425px;
+  margin-right: 11px;
+}
+
+.middle-img {
+  background-image: url("/great-idea-website/img/mid-page-accent.jpg");
+  width: 876px;
+  height: 182px;
+}
+
+section.thirds .col-third {
+  display: inline-block;
+  width: 280px;
+  margin-right: 9px;
+}
+
+section.contact {
+  border-top: solid thin #000000;
+}
+
+section.contact address {
+  width: 150px;
+}
+
+section.contact address a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+footer {
+  height: 170px;
+  text-align: center;
+}
