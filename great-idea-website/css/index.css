@@ -152,10 +152,14 @@ h5 {
   font-family: "Faster One", "Bangers", cursive;
 }
 
+h2 {
+  padding-left: 7px;
+}
+
 /* Your code starts here! */
 body {
   width: 876px;
-  margin: 90px auto 0 auto;
+  margin: 90px auto 0;
 }
 
 h2 {
@@ -169,7 +173,7 @@ section {
 
 nav {
   height: 80px;
-  padding: 30px 0 60px 0;
+  padding: 30px 0 60px;
 
   /* Stretch Goal */
   position: fixed;
@@ -177,10 +181,26 @@ nav {
   background-color: #ffffff;
 }
 
-nav a {
+nav a.nav-link {
+  display: inline-block;
   margin-right: 56px;
   text-decoration: none;
   color: #cccccc;
+}
+
+/* Stretch Goal */
+nav a.nav-link:hover {
+  animation: nav 300ms ease-in forwards;
+}
+
+@keyframes nav {
+  0% {
+    transform: scale(1) skew(0);
+  }
+  100% {
+    transform: scale(1.2) skew(-12deg);
+    color: goldenrod;
+  }
 }
 
 nav div.logo {
@@ -220,6 +240,22 @@ header .header-left button {
   letter-spacing: 1px;
 }
 
+/* Stretch Goal */
+header .header-left button:hover {
+  animation: skew 400ms ease-in forwards;
+}
+
+@keyframes skew {
+  0% {
+    transform: skew(0);
+  }
+  100% {
+    background-color: goldenrod;
+    transform: skew(-8deg);
+    box-shadow: -2px 2px 8px grey;
+  }
+}
+
 header div.header-img {
   display: inline-block;
   vertical-align: middle;
@@ -232,8 +268,8 @@ header div.header-img {
 
 section.two-column .col {
   display: inline-block;
-  width: 425px;
-  margin-right: 11px;
+  width: 48.5%;
+  margin-right: 1%;
 }
 
 .middle-img {
@@ -244,8 +280,8 @@ section.two-column .col {
 
 section.thirds .col-third {
   display: inline-block;
-  width: 280px;
-  margin-right: 9px;
+  width: 32%;
+  margin-right: 1%;
 }
 
 section.contact {
@@ -266,4 +302,71 @@ section.contact address a {
 footer {
   height: 170px;
   text-align: center;
+}
+
+/* Product CSS */
+aside,
+main {
+  margin-top: 20px;
+}
+
+aside {
+  display: inline-block;
+  width: 20%;
+  margin-top: 20px;
+  margin-right: 2%;
+}
+
+aside ul.category {
+  margin-top: 20px;
+}
+
+aside ul.category:first-child {
+  margin-top: 0;
+}
+
+aside ul.category h3.category-title,
+aside ul.category li.category-item {
+  margin-bottom: 6px;
+}
+
+aside ul.category li.category-item,
+main ul.product-list li.product-item p,
+main ul.product-list li.product-item figure figcaption {
+  color: grey;
+}
+
+main {
+  display: inline-block;
+  width: 77%;
+  vertical-align: top;
+
+  margin-bottom: 40px;
+}
+
+main ul.product-list li.product-item {
+  display: inline-block;
+  width: 30%;
+  margin-left: 2%;
+  margin-bottom: 25px;
+}
+
+main ul.product-list li.product-item figure img {
+  width: 100%;
+}
+
+main ul.product-list li.product-item figure figcaption {
+  margin-top: 8px;
+  font-size: 11px;
+}
+
+main ul.product-list li.product-item h2.product-title {
+  font-family: inherit;
+  margin: 10px 0;
+  padding-left: 0;
+  font-size: 17px;
+}
+
+main ul.product-list li.product-item p {
+  font-size: 14px;
 }
